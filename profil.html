@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>Profil - Fakultas Ilmu Sosial dan Ilmu Politik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logousu.png" type="image/x-icon">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- boot -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    <!-- lightslider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<style>
+    :root {
+        --menu-bar-width: 25px;
+        --menu-bar-height: 3px;
+        --menu-bar-spacing: 4px;
+        --menu-bar-color: #000;
+        --header-font-size: 38px;
+        --header-font-weight: bold;
+        --header-font-color: #333;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Untuk mengatur aspek rasio 16:9 (tinggi / lebar * 100%) */
+    }
+
+    .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    }
+
+    .sambutan, .kepsek {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .sambutan h1 {
+            text-align: center;
+        }
+        .visiMisi {
+            display: flex;
+            justify-content: space-between;
+        }
+        .visi, .misi {
+            width: 45%;
+        }
+        .titleEkstrakulikuler {
+            text-align: center;
+            position: relative;
+        }
+        .titleEkstrakulikuler::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px; /* Ketebalan garis */
+            background-color: yellow; /* Warna garis */
+            position: absolute;
+            bottom: -5px; /* Jarak garis dari teks */
+            left: 0;
+        }
+        .numbered-list {
+            margin-left: 20px;
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+        }
+        .numbered-list li {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            border-left: 10px solid #007bff; /* garis kiri */
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: all 0.3s ease; /* efek transisi saat hover */
+        }
+
+        .numbered-list li:hover {
+            background-color: #038A47; /* warna latar saat hover */
+        }
+
+        .numbered-list li:before {
+            counter-increment: listItem;
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            background-color: #007bff;
+            color: #FFFFFF;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            transform: translateY(-50%);
+        }
+
+        .numbered-list li strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #FFB800;
+        }
+
+        .numbered-list li p{
+            margin: 0;
+            color: #000;
+        }
+
+        h1 {
+    border-bottom: 2px solid yellow; /* This will give a yellow underline with space */
+    padding-bottom: 5px; /* Adjust this value to change the space */
+    display: inline-block; /* Ensure inline-block display for padding to take effect */
+}
+
+ul li a {
+    color: black; /* Default color for links */
+    text-decoration: none; /* Remove default underline */
+}
+
+ul li a:hover {
+    color: yellow; /* Change color to yellow on hover */
+}
+
+
+
+span:hover{
+    color: #373737; /* Change color to yellow on hover */
+}
+
+i span {
+    color: white;
+}
+    
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  navbarHome fixed-top">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#">
+                <img src="images/logousu.png" class="logo-usu">
+                <img src="images/logofisip.png" class="logo-fisip">
+            </a>
+            
+
+            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Penghargaan.html">Penghargaan</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="UpdateKegiatan.html">Update Kegiatan</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil Prodi
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="IlmuAdministrasiPublik.html"> Ilmu Administrasi Publik</a>
+                            <div class="dropdown-menu"></div>
+                            <a class="dropdown-item" href="IlmuAdministrasiBisnis.html">Ilmu Administrasi Bisnis</a>
+                            <a class="dropdown-item" href="IlmuKomunikasi.html">Ilmu Komunikasi </a>
+                            <a class="dropdown-item" href="IlmuPolitik.html">Ilmu Politik </a>
+                            <a class="dropdown-item" href="Antropologi.html">Antropologi </a>
+                            <a class="dropdown-item" href="Sosiologi.html">Sosiologi </a>
+                            <a class="dropdown-item" href="KesejahteraanSosial.html">Kesejahteraan Sosial </a>
+
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="containerEkstra"></div>
+        <div class="container"></div>
+        <br>
+        <center>
+        <h1>Visi</h1>
+        <p>
+            Menjadi Fakultas yang Memiliki Keunggulan Akademik dan Mampu Bersaing dalam Pengembangan Ilmu dan Riset Terapan<br>
+            Kebijakan Publik Bidang Sosial dan Politik Pada Tataran Global Tahun 2021
+        </p>
+    </center>
+
+        <div class="container"></div>
+        <br>
+        <center>
+        <h1>Misi</h1>
+        <ol class="numbered-list">
+            <li>
+                <strong>1. Kompetensi Dosen</strong>
+                <p>Menyelenggarakan pendidikan dan pengajaran di bidang ilmu sosial dan ilmu politik dengan mengandalkan kompetensi dosen sesuai dengan materi yang relevan dan mutakhir, kompetitif dan bermoral.</p>
+            </li>
+            <li>
+                <strong>2. Menjadi Pelaku Perubahan</strong>
+                <p>Menjadikan lulusan yang mampu berperan sebagai pelaku perubahan dalam kehidupan sosial dan politik di masyarakat.</p>
+            </li>
+            <li>
+                <strong>3. Riset Terapan</strong>
+                <p>Mengembangkan riset terapan dan publikasi untuk memperkaya ilmu pengetahuan yang berguna bagi masyarakat.</p>
+            </li>
+            <li>
+                <strong>4. Pengabdian Masyarakat</strong>
+                <p>Meningkatkan kegiatan pengabdian masyarakat dalam rangka kepedulian sosial sivitas akademika terhadap masyarakat.</p>
+            </li>
+            <li>
+                <strong>5. Jaringan Kerjasama</strong>
+                <p>Membangun jaringan kerjasama dalam rangka meningkatkan daya saing dengan instansi pemerintah, pihak swasta dan non government organization (NGO).</p>
+            </li>
+        </ol>
+    </center>
+
+
+
+    <div class="container">
+        <h3 class="titleEkstrakulikuler">Tentang Fakultas Ilmu Sosial dan Ilmu Politik</h3>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Sejarah Fakultas
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h4>Tahun 1980</h4>
+                        <p>
+                            sejak 1980 telah mengalami berbagai perkembangan terutama terkait program studi dan sumber daya manusia (SDM) untuk mencerdaskan kehidupan bangsa. Bermula dari Jurusan Pengetahuan Masyarakat pada Fakultas Hukum Universitas Sumatera Utara, setahun kemudian diubah menjadi Jurusan Pengetahuan Masyarakat, kemudian Jurusan Ilmu-Ilmu Sosial (IIS). Pada awalnya (1980/1981), FISIP-USU hanya membuka dua jurusan, yaitu 1) Jurusan Ilmu Administrasi Negara; dan 2) Jurusan Ilmu Komunikasi.
+                        </p>
+                        <h4> Tahun 1982
+                        </h4>
+                        <p>
+                            1982 Fakultas Ilmu Sosial dan Ilmu Politik Universitas Sumatera Utara (FISIP USU) berdiri sejak tahun 1982 berdasarkan Surat Keputusan Presiden Republik Indonesia Nomor 36 Tahun 1982 dan menjadi fakultas yang ke-9 (kesembilan) di lingkungan Universitas Sumatera Utara. Pada tahun 1982, Jurusan Ilmu-Ilmu Sosial resmi menjadi Fakultas Ilmu Sosial dan Ilmu Politik, dengan menggunakan gedung perkuliahan di Fakultas Kedokteran Gigi (FKG) Universitas Sumatera Utara.
+                        </p>
+                        <h4>Tahun 1983 - 1984</h4>
+                        <p>
+                            Tahun Ajaran 1983/1984, FISIP USU membuka dua jurusan baru yaitu 1) Jurusan Sosiologi; dan 2) Jurusan Kesejahteraan Sosial; serta menerima perpindahan Jurusan Antropologi dari Fakultas Sastra Universitas Sumatera Utara.
+                        </p>
+                        <h4>Tahun 2001</h4>
+                        <p>
+                            Membuka program S1 Program Studi Ilmu Politik dengan SK Dikti No. 108/Dikti/Kep/2001 tanggal 30 April 2001.
+                        </p>
+                        <h4>Tahun 2009</h4>
+                        <p>
+                            Tahun 2009 FISIP USU membuka Program Studi Administrasi Bisnis dengan SK Rektor USU No. 920/H5.1.R/SK/PRS/2009, tanggal 11 Mei 2009.
+                        </p>
+                        
+
+                        <h4>Fasilitas Fakultas</h4>
+                        <div class="fasilitas d-flex my-4">
+                            <ul class="mx-3">
+                                <li><a href="https://fisip.usu.ac.id/id/asa">ASA (Aplikasi Satu Atap)</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/literacy-room">Literacy Room</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/gedung-dekanat">Gedung Dekanat</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/ruang-dekan">Ruang Dekan</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/ruang-rapat-pimpinan">Ruang Rapat Pimpinan Fisip Usu</a></li>
+                            </ul>
+                            
+                            <ul class="mx-3">
+                                <li><a href="https://fisip.usu.ac.id/id/kantor-adm-prodi">Ruang Kantor dan Administrasi Prodi</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/aula">Aula Serba Guna</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/pendopo">Pendopo Mahasiswa FISIP USU</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/ruang-tunggu">Ruang Tunggu Absensi</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/ruang-dosen">Ruang Dosen</a></li>
+                            </ul>
+                            
+                            <ul class="mx-3">
+                                <li><a href="https://fisip.usu.ac.id/id/ruang-skripsi">Ruang Meja Hijau/Skripsi</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/kantin">Kantin</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/musholla">Musholla</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/sky-cross">Sky Cross</a></li>
+                                <li><a href="https://fisip.usu.ac.id/id/selasar">Selasar</a></li>
+                            </ul>
+                            
+
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Profil Pimpinan Fakultas
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="pembinaEkstrakulikuler">
+                        
+                        <div class="perPembina">
+                            <a href="profilfisip.html">
+                                <img src="images/dekan-fisip_.png" alt="">
+                                <br>
+                                <center><span class="jabatan">Dekan FISIP</span></center>
+                                <h5>Dr. Hatta Ridho, S.Sos., MSP</h5>
+                            </a>
+                        </div>
+
+                        
+                        <div class="perPembina">
+                            <a href="profilfisip.html">
+                                <img src="images/wakil-dekan-1.png" alt="">
+                                <br>
+                                <center><span class="jabatan">Wakil Dekan 1 FISIP</span></center>
+                                <h5>Husni Thamrin, S.Sos., MSP</h5>
+                            </a>
+                        </div>
+
+                        <div class="perPembina">
+                            <a href="profilfisip.html">
+                                <img src="images/wakil-dekan-2.png" alt="">
+                                <br>
+                                <center><span class="jabatan">Wakil Dekan 2 FISIP</span></center>
+                                <h5> Dr. Nurman Achmad, S.Sos., M.Soc.Sc.</h5>
+                            </a>
+                        </div>
+
+
+                        <div class="perPembina">
+                            <a href="profilfisip.html">
+                                <img src="images/wakil-dekan-3.png" alt="">
+                                <br>
+                                <center><span class="jabatan">Wakil Dekan 3 FISIP</span></center>
+                                <h5> Dr. Harmona Daulay, S.Sos., M.Si</h5>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    
+
+
+    <!-- sosmed icon -->
+    <div class="iconBox">
+
+        <a href="https://web.facebook.com/kampusfisipusu.medan?_rdc=1&_rdr" class="perIconBox fb">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/fisip.usu/?hl=en" class="perIconBox ig">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCxhQ5ggRByzi9oYhppmRwhQ" class="perIconBox yt">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
+
+    <div class="footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="my-4 text-white text-left"></h2>
+
+                    <div class="footerContactUs">
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-envelope"></i>
+                        <p><a href  class="text-white">fisip@usu.ac.id</a></p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-phone-alt"></i>
+                            <p><a href  class="text-white">+62 61 8211965</a></p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-map-marked "></i>
+                            <p class="text-white">Jl. Dr. A. Sofian No. 1A, Padang Bulan, Kec. Medan Baru, Medan, 20222, Sumatera Utara, Indonesia</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+                    <h4 class="my-4 text-center text-white">Peta Situs</h4>
+                    <div class="footerAbout">
+                        <a href="" class="text-white">Profil Fisip</a>
+                        <a href="" class="text-white">Penghargaan</a>
+                        <a href="" class="text-white">Update Kegiatan</a>
+                        <a href="https://www.usu.ac.id/id" class="text-white">Official Usu</a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 text-center">
+                    <h4 class="my-4 text-white">Maps</h4>
+                    <div class="form-group map-container">
+                        <!-- Tag menampilkan tampilan yang bersource dari internet, saya gunakan ini untuk menampilkan peta -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.134026376595!2d98.65481087371663!3d3.556581650515621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fe174e89a9b%3A0x1fb960d4f37c4705!2sFakultas%20Ilmu%20Sosial%20dan%20Ilmu%20Politik%20-%20Universitas%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1716221194091!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>                        
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footerCopyright">
+        <p class="text-white">
+            <i class="far fa-copyright"></i>2024 <span>Hak Cipta Sumatera Utara</span><a
+                href="index.html">
+                </a>
+        </p>
+    </div>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

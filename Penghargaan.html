@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>Penghargaan - Fakultas Ilmu Sosial dan Ilmu Politik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logousu.png" type="image/x-icon">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- boot -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+
+    <!-- lightslider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css"
+        integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
+        integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<style>
+    :root {
+        --menu-bar-width: 25px;
+        --menu-bar-height: 3px;
+        --menu-bar-spacing: 4px;
+        --menu-bar-color: #000;
+        --header-font-size: 38px;
+        --header-font-weight: bold;
+        --header-font-color: #333;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-bottom: 2px solid #000;
+        position: fixed;
+        /* Header tetap berada di bagian atas */
+        top: 0;
+        /* Atur posisi header di bagian atas */
+        left: 0;
+        /* Atur posisi header di bagian kiri */
+        width: 100%;
+        /* Agar header memenuhi lebar layar */
+        height: 80px;
+        z-index: 1000;
+        /* Untuk memastikan header tetap berada di atas konten */
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .menu-toggle .bar {
+        width: var(--menu-bar-width);
+        height: var(--menu-bar-height);
+        background-color: var(--menu-bar-color);
+        margin: var(--menu-bar-spacing) 0;
+        transition: 0.3s;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        background-color: #0d47a1;
+        /* Ubah warna latar belakang menjadi biru tua */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        z-index: 1000;
+        padding: 15px;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        /* Ubah warna teks menjadi putih */
+        margin-left: 10px;
+        flex-grow: 1;
+    }
+
+    .menu ul li i {
+        color: #fff;
+        /* Ubah warna ikon menjadi putih */
+    }
+
+    .menu ul li:hover {
+        background-color: #1565c0;
+        /* Ubah warna latar belakang saat dihover */
+    }
+
+    .header-title {
+        font-size: calc(10px + 2vw);
+        font-weight: var(--header-font-weight);
+        color: var(--header-font-color);
+        margin-left: 0px;
+        flex-grow: 1;
+        text-align: center;
+        /* Pusatkan judul header */
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .map-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+        /* Untuk mengatur aspek rasio 16:9 (tinggi / lebar * 100%) */
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    span:hover {
+        color: #373737;
+        /* Change color to yellow on hover */
+    }
+    
+    h1 {
+    border-bottom: 4px solid yellow; /* This will give a yellow underline with space */
+    padding-bottom: 5px; /* Adjust this value to change the space */
+    display: inline-block; /* Ensure inline-block display for padding to take effect */
+}
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  navbarHome fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="images/logousu.png" class="logo-usu">
+                <img src="images/logofisip.png" class="logo-fisip">
+            </a>
+
+
+            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Penghargaan.html">Penghargaan</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="UpdateKegiatan.html">Update Kegiatan</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil Prodi
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="IlmuAdministrasiPublik.html"> Ilmu Administrasi Publik</a>
+                            <div class="dropdown-menu"></div>
+                            <a class="dropdown-item" href="IlmuAdministrasiBisnis.html">Ilmu Administrasi Bisnis</a>
+                            <a class="dropdown-item" href="IlmuKomunikasi.html">Ilmu Komunikasi </a>
+                            <a class="dropdown-item" href="IlmuPolitik.html">Ilmu Politik </a>
+                            <a class="dropdown-item" href="Antropologi.html">Antropologi </a>
+                            <a class="dropdown-item" href="Sosiologi.html">Sosiologi </a>
+                            <a class="dropdown-item" href="KesejahteraanSosial.html">Kesejahteraan Sosial </a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
+    <ul id="autoWidth" class="cs-hidden">
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="satu" src="images/CoverPenghargaan.png" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="dua" src="images/Penghargaan1.jpg" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                    <div class="mainText">
+                    </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="tiga" src="images/Penghargaan2.jpg" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="empat" src="images/Penghargaan3.jpg" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                </div>
+            </section>
+        </li>
+
+        <li class="item-a">
+            <section class="slideshow">
+                <img class="lima" src="images/Penghargaan4.jpg" alt="Team Work">
+                <div class="shadow"></div>
+                <div class="container">
+                </div>
+            </section>
+        </li>
+
+
+    </ul>
+
+    <br>
+    <center>
+        <h1>Penghargaan</h1>
+    </center>
+    <br>
+    <div class="container artikel">
+
+        <div class="perArtikel">
+            <img src="images/Penghargaan1.jpg" alt="Artikel">
+            <div class="textArtikel">
+                <h3>Pemilihan Mahasiswa Berprestasi (PILMAPRES) 2024 Tingkat Fakultas</h3>
+                <p>
+                    NAMA : NABILA FAHRIANI PANE <br>
+                    WAKTU : 28 MARET 2024
+                </p>
+            </div>
+        </div>
+        </a>
+
+
+        <div class="perArtikel">
+            <img src="images/Penghargaan2.jpg" alt="Artikel">
+            <div class="textArtikel">
+                <h3>Pemilihan Mahasiswa Berprestasi (PILMAPRES) 2024 Tingkat Fakultas</h3>
+                <p>
+                    NAMA : ANASTASYA HASUGIAN <br>
+                    WAKTU : 28 MARET 2024
+
+                </p>
+            </div>
+        </div>
+        </a>
+
+        <div class="perArtikel">
+            <img src="images/Penghargaan3.jpg" alt="Artikel">
+            <div class="textArtikel">
+                <h3>Pemilihan Mahasiswa Berprestasi (PILMAPRES) 2024 Tingkat Fakultas</h3>
+                <p>
+                    NAMA : NURUL ADILLA ALATAS ABUS<br>
+                    WAKTU : 28 MARET 2024
+
+                </p>
+            </div>
+        </div>
+        </a>
+
+        <div class="perArtikel">
+            <img src="images/Penghargaan4.jpg" alt="Artikel">
+            <div class="textArtikel">
+                <h3>Pemilihan Mahasiswa Berprestasi (PILMAPRES) 2024 Best Presenter I</h3>
+                <p>
+                    NAMA : NABILA FAHRIANI PANE<br>
+                    WAKTU : 5 APRIL 2024
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- sosmed icon -->
+    <div class="iconBox">
+
+        <a href="https://web.facebook.com/kampusfisipusu.medan?_rdc=1&_rdr" class="perIconBox fb">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/fisip.usu/?hl=en" class="perIconBox ig">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCxhQ5ggRByzi9oYhppmRwhQ" class="perIconBox yt">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
+
+    <div class="footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="my-4 text-white text-left"></h2>
+
+                    <div class="footerContactUs">
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-envelope"></i>
+                            <p><a href class="text-white">fisip@usu.ac.id</a></p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-phone-alt"></i>
+                            <p><a href class="text-white">+62 61 8211965</a></p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-map-marked "></i>
+                            <p class="text-white">Jl. Dr. A. Sofian No. 1A, Padang Bulan, Kec. Medan Baru, Medan, 20222,
+                                Sumatera Utara, Indonesia</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+                    <h4 class="my-4 text-center text-white">Peta Situs</h4>
+                    <div class="footerAbout">
+                        <a href="" class="text-white">Profil Fisip</a>
+                        <a href="" class="text-white">Penghargaan</a>
+                        <a href="" class="text-white">Update Kegiatan</a>
+                        <a href="https://www.usu.ac.id/id" class="text-white">Official Usu</a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 text-center">
+                    <h4 class="my-4 text-white">Maps</h4>
+                    <div class="form-group map-container">
+                        <!-- Tag menampilkan tampilan yang bersource dari internet, saya gunakan ini untuk menampilkan peta -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.134026376595!2d98.65481087371663!3d3.556581650515621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fe174e89a9b%3A0x1fb960d4f37c4705!2sFakultas%20Ilmu%20Sosial%20dan%20Ilmu%20Politik%20-%20Universitas%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1716221194091!5m2!1sid!2sid"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footerCopyright">
+        <p class="text-white">
+            <i class="far fa-copyright"></i>2024 <span>Hak Cipta Sumatera Utara</span><a href="index.html">
+            </a>
+        </p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

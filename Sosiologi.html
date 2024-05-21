@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>Prodi Sosiologi - Fakultas Ilmu Sosial dan Ilmu Politik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logousu.png" type="image/x-icon">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- boot -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    <!-- lightslider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+    <style>
+        .card {
+    background-color: #F0F0F0; /* Warna hijau pastel */
+    border-radius: 10px; /* Membuat sudut card berbentuk melengkung */
+    padding: 20px; /* Ruang di dalam card */
+    margin-bottom: 20px; /* Jarak antara card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek mengapung */
+}
+
+.perArtikel img {
+    width: 100%; /* Lebar gambar di dalam card */
+    border-radius: 10px; /* Membuat sudut gambar berbentuk melengkung */
+}
+
+.textArtikel {
+    margin-top: 15px; /* Jarak antara gambar dan teks */
+}
+
+/* Mengatur jarak antara elemen-elemen pada riwayat pendidikan dan jabatan */
+.card p {
+    margin: 0; /* Menghilangkan margin */
+    padding: 0; /* Menghilangkan padding */
+}
+
+/* Mengatur jarak antara setiap item pada riwayat pendidikan */
+.card li {
+    margin-bottom: 5px; /* Atur jarak antara setiap item */
+}
+span:hover{
+    color: #373737; /* Change color to yellow on hover */
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Untuk mengatur aspek rasio 16:9 (tinggi / lebar * 100%) */
+    }
+
+    .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    }
+
+    h1 {
+    border-bottom: 4px solid yellow; /* This will give a yellow underline with space */
+    padding-bottom: 5px; /* Adjust this value to change the space */
+    display: inline-block; /* Ensure inline-block display for padding to take effect */
+}
+span:hover {
+        color: #373737;
+        /* Change color to yellow on hover */
+    }
+    </style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  navbarHome fixed-top">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#">
+                <img src="images/logousu.png" class="logo-usu">
+                <img src="images/logofisip.png" class="logo-fisip">
+            </a>
+            
+
+            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Penghargaan.html">Penghargaan</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="UpdateKegiatan.html">Update Kegiatan</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil Prodi
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="IlmuAdministrasiPublik.html"> Ilmu Administrasi Publik</a>
+                            <div class="dropdown-menu"></div>
+                            <a class="dropdown-item" href="IlmuAdministrasiBisnis.html">Ilmu Administrasi Bisnis</a>
+                            <a class="dropdown-item" href="IlmuKomunikasi.html">Ilmu Komunikasi </a>
+                            <a class="dropdown-item" href="IlmuPolitik.html">Ilmu Politik </a>
+                            <a class="dropdown-item" href="Antropologi.html">Antropologi </a>
+                            <a class="dropdown-item" href="Sosiologi.html">Sosiologi </a>
+                            <a class="dropdown-item" href="KesejahteraanSosial.html">Kesejahteraan Sosial </a>
+
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <img src="images/sosiologi/Beranda Fisip.png" alt="Img Artikel" class="imgArtikel">
+
+
+    <div class="container mainDetailArtikel">
+        <div class="row">
+            <div class="col-md-8" style="text-align: justify;">
+
+            <h3>Sejarah dan Perkembangan Program Studi Sosiologi</h3>
+
+                <p>
+                    Keberadaan Program Studi Sosiologi di Fakultas Ilmu Sosial dan Ilmu Politik, Universitas Sumatera Utara 
+                    masih relatif muda dibandingkan fakultas lain yang ada di USU. Program Studi Sosiologi pertama kali didirikan 
+                    berdasarkan Surat Keputusan Rektor Universitas Sumatera Utara No. 1181/PT.05/C.80 Tanggal 1 Juli 1980, kemudian 
+                    diperkuat dengan Surat Keputusan Menteri Pendidikan dan Kebudayaan No. 0535/O/1983. Sejalan dengan perubahan 
+                    status USU menjadi Badan Hukum Milik Negara (BHMN) pada tahun 2003, terjadi pula perubahan nama dari Departemen 
+                    menjadi Program Studi Sosiologi.
+
+                </p>
+
+                <p>
+                    Tuntutan peningkatan kualitas pendidikan di Indonesia, termasuk pendidikan di Program Studi Sosiologi, 
+                    membuat Program Studi ini terus berbenah diri dan melakukan konsolidasi baik dalam bidang administratif, 
+                    maupun bidang sumber daya manusia dalam rangka mempersiapkan staf edukatif yang lebih profesional.
+
+                </p>
+
+                <p>
+                    Dengan pertimbangan ketersediaan tenaga edukatif dan administratif, Program Studi Sosiologi baru dibuka pada tahun 1983. 
+                    Pada waktu itu, pemilihan jurusan belum dilakukan berdasarkan seleksi masuk perguruan tinggi, melainkan dilakukan pada 
+                    semester tujuh (VII). Berdasarkan minat mahasiswa sendiri. Baru pada tahun 1987, setelah dipertimbangkan dari seluruh 
+                    perangkat staf edukatif maupun administratif, maka Program Studi Sosiologi mulai menerima mahasiswa/i yang berminat melalui 
+                    jalur SNMPTN (Seleksi Nsional Masuk Perguruan Tinggi Negeri), Ujian Masuk Perguruan Tinggi Negeri (UMPTN) sekarang berubah 
+                    nama menjadi Seleksi Bersama Masuk Perguruan Tinggi (SBMPTN).
+                </p>
+
+                <p>
+                    Pada saat itu dirasakan masih ada keterbatasan baik dari segi kuantitas maupun kualitas staf edukatif, sehingga secara terus 
+                    menerus jumlah dosen ditambah dan dilakukan program pendidikan lanjutan bagi para dosen di berbagai perguruan tinggi terkemuka 
+                    baik dalam negeri maupun luar negeri, sehingga pada saat ini mayoritas dosen telah berpendidikan Magister (Strata – 2) dan 
+                    beberapa di antaranya telah meraih gelar Doktor (Strata – 3), bahkan profesor. Peningkatan kualitas pendidikan dosen akan terus 
+                    dilakukan hingga seluruh dosen memiliki pendidikan Doktoral (Strata -3).
+
+                </p>
+
+                <h4>VISI Program Studi</h4>
+
+                <p>
+                “Menjadi Program Studi yang unggul dan berdaya saing pada tataran global di bidang perencanaan sosial dan 
+                pembangunan serta pemberdayaan masyarakat.”
+                </p>
+
+                <h4>MISI Program Studi</h4>
+
+                <p>
+                    <li>Menyelenggarakan kegiatan pembelajaran berpusat pada mahasiswa (Student Centered Learning), mendayagunakan E-Learning, dan mengimplementasikan</li>
+                    <li>Program MBKM untuk menghadapi era industri 4.0: 2. Melakukan penelitian isu-isu multikultural berbasis kearifan lokal, nasional maupun internasional</li>
+                    <li>Melakukan pengabdian masyarakat dengan fokus pemberdayaan masyarakat pada kelompok-kelompok marginal</li>
+
+                </p>
+            </div>
+            
+            <div class="col-md-4 infoPenulis ">
+                <div class="">
+                    <div class="shareArtikel mb-4">
+                        <p>Share</p>
+
+                        <div class="containerIconShare">
+
+                            <a href="https://web.facebook.com/kampusfisipusu.medan?_rdc=1&_rdr" class="iconShare fb">
+                                <i class="fab text-white fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/fisip.usu/?hl=en" class="iconShare ig">
+                                <i class="fab text-white fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/channel/UCxhQ5ggRByzi9oYhppmRwhQ" class="iconShare yt">
+                                <i class="fab text-white fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+
+                    <div class="penulis">
+                        <p class="mt-3 mb-4">PUBLISHED BY</p>
+
+                        <img src="images/logousu.png" alt="Img Penulis">
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <center>
+        <h1>Dosen & Staff</h1>
+    </center>
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi1.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Drs. T. Ilham Saladin M.SP  <br>
+                        <b>NIP :</b> 196208211988031001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Katolik Parahyangan 1986 S1</li>
+                            <li>Universitas Sumatera Utara 2008 S2</li>
+                        <b>JABATAN :</b> LAKTOR
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi2.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Dra. Linda Elida, M.Si <br>
+                        <b>NIP :</b> 196702071991032001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1990 S1</li>
+                            <li>Universitas Sumatera Utara 2000 S2</li>
+                        <b>JABATAN :</b> Fungsional Lektor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi3.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Drs. Muba Simanihuruk, M.Si  <br>
+                        <b>NIP :</b> 196703171993031002 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1992 S1</li>
+                            <li>Universitas Indonesia 1998 S2 </li>
+                        <b>JABATAN :</b> Lektor Kepala
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi4.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Dr. Harmona Daulay, S.Sos., M.Si  <br>
+                        <b>NIP :</b> 196907111994032002 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1993 S1</li>
+                            <li>Universitas Gadjah Mada 2000 S2</li>
+                            <li>Universitas Gadjah Mada 2016 S3</li>
+                        <b>JABATAN :</b> Lektor Kepala
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi5.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Prof. Dr. Drs. Sismudjito, M.Si <br>
+                        <b>NIP :</b> 195604042000111001/0404056 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Gadjah Mada 1986 S1</li>
+                            <li>Universitas Sumatera Utara 1998 S2</li>
+                            <li>Universitas Sumatera Utara 2014 S3</li>
+                        <b>JABATAN :</b> Profesor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi6.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Prof. Dr. M. Arif Nasution MA   <br>
+                        <b>NIP :</b> 196207031987111001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1986 S1</li>
+                            <li>Universitas Sumatera Utara 2003 Profesi</li>
+                        <b>JABATAN :</b> Profesor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi7.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Prof. Drs. Rizabuana M.Phil., Ph.D  <br>
+                        <b>NIP :</b> 196109291986011002 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1985 S1</li>
+                            <li>Universiti Malaya 2006</li>
+                        <b>JABATAN :</b> Profesor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi8.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Prof. Dr. Badaruddin M.Si <br>
+                        <b>NIP :</b> 196805251992031002 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1991 S1</li>
+                            <li>Universitas Padjadjaran 1998 S2</li>
+                            <li>Universitas Padjadjaran 2003 S3</li>
+                        <b>JABATAN :</b> Profesor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi9.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Dr. Dra. Hadriana Marhaeni Munthe, M.Si <br>
+                        <b>NIP :</b> 196505261990032006 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1994 S1</li>
+                            <li>Universitas Padjadjaran 2003 S2</li>
+                            <li>Universitas Padjadjaran 2016 S3</li>
+                        <b>JABATAN :</b> Lektor Kepala
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi10.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Dra. Ria Manurung M.Si   <br>
+                        <b>NIP :</b> 196212031989032001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1988 S1</li>
+                            <li>Universitas Indonesia 1996 S2</li>
+                        <b>JABATAN :</b> Lektor Kepala
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi11.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Drs. HENRY SITORUS M.Si   <br>
+                        <b>NIP :</b> 196602281990031001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1994 S1</li>
+                            <li>Universitas Indonesia 1996 S2</li>
+                        <b>JABATAN :</b> Lektor Kepala
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi12.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Dra. Lina Sudarwati M.Si   <br>
+                        <b>NIP :</b> 196603181989032001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Gadjah Mada 1997 S2</li>
+                        <b>JABATAN :</b> Lektor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi13.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Henri Sitorus S.Sos., M.Sc., Ph.D <br>
+                        <b>NIP :</b> 197010101996021001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1994 S1 </li>
+                            <li>N/A	S2 </li>
+                            <li>Australian National University 2015	S3</li>
+                        <b>JABATAN :</b> Asisten Ahli
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi14.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Bisru Hafi S.Sos, M.Si  <br>
+                        <b>NIP :</b> 196808272014091002 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li>Universitas Sumatera Utara 1994 S1</li>
+                            <li>Universitas Sumatera Utara 1999 S2</li>
+                        <b>JABATAN :</b> Lektor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi15.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Rahman Malik S.Sos., M.Sos  <br>
+                        <b>NIP :</b> 199205202020011001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li> Universitas Brawijaya 2015 S1</li>
+                            <li> Universitas Sebelas Maret 2019 S2</li>
+                        <b>JABATAN :</b> Dosen Sosiologi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Sosiologi16.jpg" alt="Artikel">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Rahma Hayati Harahap S.Sos., M.Sos  <br>
+                        <b>NIP :</b> 199505122021022001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li> Universitas Andalas 2017 S1</li>
+                            <li> Universitas Andalas 2020 S2</li>
+                        <b>JABATAN :</b> Dosen Sosiologi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container artikel">
+        <div class="card">
+            <div class="perArtikel">
+                <img src="images/Drs. T. Ilham Saladin M.SP.jpg" alt="None">
+                <div class="textArtikel">
+                    <p>
+                        <b>NAMA :</b> Drs. Terang Kita Brahmana M.SP<br>
+                        <b>NIP :</b> 196011051988031001 <br>
+                        <b>RIWAYAT PENDIDIKAN :</b>
+                            <li> Universitas Katolik Parahyangan 1986 S1</li>
+                            <li> Universitas Sumatera Utara 2014 S2</li>
+                        <b>JABATAN :</b> Lektor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="my-4 text-white text-left"></h2>
+
+                    <div class="footerContactUs">
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-envelope"></i>
+                        <p><a href  class="text-white">fisip@usu.ac.id</a></p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-phone-alt"></i>
+                            <p><a href  class="text-white">+62 61 8211965</a></p>
+                        </div>
+
+                        <div class="perFooterContactUs">
+                            <i class="fas text-white fa-map-marked "></i>
+                            <p class="text-white">Jl. Dr. A. Sofian No. 1A, Padang Bulan, Kec. Medan Baru, Medan, 20222, Sumatera Utara, Indonesia</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+                    <h4 class="my-4 text-center text-white">Peta Situs</h4>
+                    <div class="footerAbout">
+                        <a href="" class="text-white">Profil Fisip</a>
+                        <a href="" class="text-white">Penghargaan</a>
+                        <a href="" class="text-white">Update Kegiatan</a>
+                        <a href="https://www.usu.ac.id/id" class="text-white">Official Usu</a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 text-center">
+                    <h4 class="my-4 text-white">Maps</h4>
+                    <div class="form-group map-container">
+                        <!-- Tag menampilkan tampilan yang bersource dari internet, saya gunakan ini untuk menampilkan peta -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.134026376595!2d98.65481087371663!3d3.556581650515621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312fe174e89a9b%3A0x1fb960d4f37c4705!2sFakultas%20Ilmu%20Sosial%20dan%20Ilmu%20Politik%20-%20Universitas%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1716221194091!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>                        
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footerCopyright">
+        <p class="text-white">
+            <i class="far fa-copyright"></i>2024 <span>Hak Cipta Sumatera Utara</span><a
+                href="index.html">
+                </a>
+        </p>
+    </div>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
